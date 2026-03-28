@@ -65,8 +65,6 @@
     width: 22px; height: 2px; background: var(--steel);
     border-radius: 1px; transition: all 0.3s;
   }
-
-  /* Page Header */
   .page-header {
     padding: 160px 40px 80px;
     background: var(--charcoal);
@@ -93,8 +91,6 @@
     max-width: 600px; margin: 20px auto 0; font-weight: 300; line-height: 1.8;
     position: relative; z-index: 1;
   }
-
-  /* Shared section */
   section { padding: 90px 40px; }
   .section-label {
     font-size: 0.75rem; font-weight: 700; letter-spacing: 0.25em;
@@ -106,8 +102,6 @@
     letter-spacing: 0.02em;
   }
   .section-title.light { color: #fff; }
-
-  /* Buttons */
   .btn-primary {
     display: inline-block; background: var(--warm-accent); color: var(--charcoal);
     padding: 15px 38px; border-radius: 6px; text-decoration: none;
@@ -128,8 +122,6 @@
     background: #fff; transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(201,168,124,0.3);
   }
-
-  /* CTA section */
   .cta-section {
     background: var(--charcoal); text-align: center;
     position: relative; overflow: hidden;
@@ -151,8 +143,6 @@
     font-size: 1.05rem; color: rgba(255,255,255,0.5);
     margin-bottom: 40px; font-weight: 300; line-height: 1.8;
   }
-
-  /* Footer */
   footer {
     background: #151515; color: rgba(255,255,255,0.5);
     padding: 64px 40px 28px;
@@ -193,8 +183,6 @@
     text-align: center; font-size: 0.75rem;
     color: rgba(255,255,255,0.25); letter-spacing: 0.03em;
   }
-
-  /* Responsive */
   @media (max-width: 960px) {
     .page-header h1 { font-size: 3rem; }
     .footer-inner { grid-template-columns: 1fr; gap: 32px; }
@@ -223,8 +211,6 @@
     transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-  /* Hero */
   .hero-section { padding: 60px 40px 80px; background: var(--soft-white); }
   .hero-inner {
     max-width: 1240px; margin: 0 auto; display: grid;
@@ -244,8 +230,6 @@
     box-shadow: 0 24px 60px rgba(0,0,0,0.1);
   }
   .hero-img img { width: 100%; height: 100%; object-fit: cover; }
-
-  /* Programs */
   .programs-grid {
     max-width: 1240px; margin: 0 auto; display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px;
@@ -273,8 +257,6 @@
     font-size: 0.78rem; color: var(--warm-accent); font-weight: 600;
     text-transform: uppercase; letter-spacing: 0.08em;
   }
-
-  /* Benefits */
   .benefits-section { background: var(--light-grey); }
   .benefits-grid {
     max-width: 1240px; margin: 0 auto; display: grid;
@@ -295,150 +277,235 @@
   .benefit-item p {
     font-size: 0.85rem; color: var(--text-muted); font-weight: 300; line-height: 1.7;
   }
+  /* Testimonials */
+  .testimonials-section { background: var(--soft-white); }
+  .testimonials-grid {
+    max-width: 1240px; margin: 0 auto; display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;
+    margin-top: 48px;
+  }
+  .testimonial-card {
+    background: #fff; border-radius: 14px; padding: 32px 28px;
+    border: 1px solid rgba(0,0,0,0.05); transition: all 0.4s;
+    position: relative;
+  }
+  .testimonial-card:hover {
+    transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+  }
+  .testimonial-card::before {
+    content: '\201C'; position: absolute; top: 16px; right: 24px;
+    font-family: 'Bebas Neue', sans-serif; font-size: 4rem;
+    color: var(--warm-accent); opacity: 0.15; line-height: 1;
+  }
+  .testimonial-stars {
+    color: var(--warm-accent); font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 14px;
+  }
+  .testimonial-card p {
+    font-size: 0.88rem; color: var(--text-body); line-height: 1.75;
+    font-weight: 300; font-style: italic; margin-bottom: 18px;
+  }
+  .testimonial-author {
+    font-size: 0.82rem; font-weight: 600; color: var(--text-dark);
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
 </style>
 </head>
 <body>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/21c58c95-b43b-4220-b47d-d6563656cdb4/TrainingGrounds_MasterLogo.png" alt="Training Grounds">
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="timetable.html">Timetable</a></li>
-      <li><a href="coaches.html">Coaches</a></li>
-      <li><a href="kids.html">Kids Academy</a></li>
+    <div class="nav-logo">
+      <a href="index.html"><img src="logo.svg" alt="Training Grounds"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#classes">Classes</a></li>
       <li><a href="womens.html" class="active">Women's Self Defence</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="join.html" class="nav-cta">Join Now</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact" class="btn-primary nav-cta">Book Now</a></li>
     </ul>
-    <button class="mobile-menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">
-      <span></span><span></span><span></span>
+    <button class="mobile-menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
   </div>
 </nav>
+
 <div class="page-header">
   <p class="section-label">Women's Programs</p>
   <h1>Women's Self Defence</h1>
-  <p>Empowering women through martial arts, building confidence and practical skills in a supportive community.</p>
+  <p>Build confidence, learn practical skills, join a supportive community of women martial artists</p>
 </div>
 
 <section class="hero-section">
   <div class="hero-inner">
-    <div class="hero-text fade-in">
+    <div class="hero-text">
       <h2>Train With Confidence</h2>
-      <p>At Training Grounds, our women's programs are designed to build real-world skills in a safe, supportive space. Whether you're brand new or have training experience, you'll find a welcoming community of like-minded women ready to grow together.</p>
-      <p>Through movement and practical training, you'll learn to trust your instincts, understand your options, and feel more capable in everyday life.</p>
-      <div style="margin-top: 24px;">
-        <a href="join.html" class="btn-primary">Book a Free Trial</a>
-      </div>
+      <p>Our Women's Self Defence programs are designed specifically for women of all ages and experience levels. Whether you're looking to build confidence, learn practical self-defence skills, or become part of a supportive martial arts community, we're here to help you reach your goals.</p>
+      <p>With experienced instructors who understand the unique needs of female students, you'll learn in a welcoming, judgment-free environment where you can grow at your own pace.</p>
     </div>
-    <div class="hero-img fade-in">
-      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/3f1fcf1b-c769-40f3-8f40-b71f7585bab8/IMG_3790.jpg" alt="Women's Self Defence Training">
+    <div class="hero-img">
+      <img src="womens-hero.jpg" alt="Women training in martial arts">
     </div>
   </div>
 </section>
 
 <section>
-  <div style="text-align: center; max-width: 680px; margin: 0 auto 48px;">
-    <p class="section-label">Our Programs</p>
-    <h2 class="section-title">Women's Classes</h2>
+  <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+    <p class="section-label">Women's Classes</p>
+    <h2 class="section-title">Strength In Motion</h2>
   </div>
   <div class="programs-grid">
     <div class="program-card fade-in">
-      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/472fc102-d6de-4805-935b-65adbbffba8f/4d16e5aa-1e46-4a6c-85a6-4750a048c7f9+2.jpg" alt="Women's Jiu-Jitsu" class="program-card-img">
+      <img src="womens-jj.jpg" alt="Women's Jiu-Jitsu" class="program-card-img">
       <div class="program-card-body">
         <h3>Women's Jiu-Jitsu</h3>
-        <p>Our Women's-Only Jiu Jitsu classes offer a supportive space to build skill and confidence. You'll train strong fundamentals and practical self-defence in a fun, welcoming environment, perfect for beginners or experienced grapplers looking to grow with like-minded partners.</p>
-        <div class="program-schedule">Tuesdays at 5:30pm</div>
+        <p>Master the art of leverage and technique in our women-focused jiu-jitsu classes. Build strength, flexibility, and problem-solving skills in a supportive environment.</p>
+        <div class="program-schedule">Mon & Wed 6:30pm</div>
       </div>
     </div>
     <div class="program-card fade-in">
-      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/3f1fcf1b-c769-40f3-8f40-b71f7585bab8/IMG_3790.jpg" alt="Women's Self Defence" class="program-card-img">
+      <img src="womens-sd.jpg" alt="Women's Self Defence" class="program-card-img">
       <div class="program-card-body">
         <h3>Women's Self Defence</h3>
-        <p>Our Women's Self-Defence sessions help you to move with confidence and build real-world skills in a safe, supportive space. Through movement and practical training, you'll learn to trust your instincts, understand your options, and feel more capable in everyday life. No experience needed.</p>
-        <div class="program-schedule">Thursdays at 5:30pm</div>
+        <p>Practical, real-world self-defence techniques combined with awareness and confidence training. Learn to protect yourself with techniques that work.</p>
+        <div class="program-schedule">Tue & Thu 7:00pm</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+    <p class="section-label">What Our Members Say</p>
+    <h2 class="section-title">Hear From the Women</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">âââââ</div>
+      <p>Fun class and learnt some useful skills. Really friendly instructors and good pace, would recommend!</p>
+      <div class="testimonial-author">Helen Winks</div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">âââââ</div>
+      <p>Good instruction and lots of opportunity to practice the skills being taught. Friendly, welcoming environment. Would definitely recommend.</p>
+      <div class="testimonial-author">Deborah Cobb-Clark</div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">âââââ</div>
+      <p>A fantastic class to attend! I took my 15 year old daughter with me and she feels more confident in defending herself now with some good techniques. I highly recommend this class to any younger or mature lady.</p>
+      <div class="testimonial-author">Rachelle Borg</div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">âââââ</div>
+      <p>Instructors were really great and friendly &mdash; made it entertaining. Learnt some really handy tips as well that I wouldn't have otherwise thought of.</p>
+      <div class="testimonial-author">Shivani Patel</div>
     </div>
   </div>
 </section>
 
 <section class="benefits-section">
   <div style="text-align: center; max-width: 680px; margin: 0 auto;">
-    <p class="section-label">Why Train With Us</p>
+    <p class="section-label">Why Join</p>
     <h2 class="section-title">More Than Self Defence</h2>
   </div>
   <div class="benefits-grid">
     <div class="benefit-item fade-in">
-      <div class="benefit-icon">&#9829;</div>
-      <h4>Supportive Environment</h4>
-      <p>Train in a welcoming space where every woman feels valued and respected, free from judgment or pressure.</p>
+      <div class="benefit-icon">ðª</div>
+      <h4>Build Strength</h4>
+      <p>Develop physical strength, endurance, and flexibility through structured training programs.</p>
     </div>
     <div class="benefit-item fade-in">
-      <div class="benefit-icon">&#9733;</div>
-      <h4>Practical Skills</h4>
-      <p>Learn real-world self-defence techniques and strategies you can apply in your everyday life with confidence.</p>
+      <div class="benefit-icon">ð¯</div>
+      <h4>Gain Confidence</h4>
+      <p>Learn practical skills and techniques that build genuine confidence in everyday situations.</p>
     </div>
     <div class="benefit-item fade-in">
-      <div class="benefit-icon">&#9889;</div>
-      <h4>All Levels Welcome</h4>
-      <p>Whether you're brand new or have training experience, our classes adapt to your level and help you progress.</p>
+      <div class="benefit-icon">ð¯</div>
+      <h4>Join Community</h4>
+      <p>Connect with other women martial artists in a supportive, judgment-free environment.</p>
     </div>
     <div class="benefit-item fade-in">
-      <div class="benefit-icon">&#9878;</div>
-      <h4>Build Confidence</h4>
-      <p>Develop mental and physical strength that extends beyond the mat and into every aspect of your life.</p>
+      <div class="benefit-icon">ð§ </div>
+      <h4>Mental Resilience</h4>
+      <p>Develop mental toughness, focus, and the ability to stay calm under pressure.</p>
     </div>
   </div>
 </section>
 
 <section class="cta-section">
-  <div class="cta-content fade-in">
-    <h2>Come and See What We're All About</h2>
-    <p>Start with a one week free trial &mdash; no commitment, just come train and experience the community for yourself.</p>
-    <a href="join.html" class="btn-warm">Register for Your Free Trial</a>
+  <div class="cta-content">
+    <h2>Ready to Start?</h2>
+    <p>Take the first step on your self-defence journey. Join our welcoming community of women martial artists today.</p>
+    <a href="#contact" class="btn-warm">Book Your First Class</a>
   </div>
 </section>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/21c58c95-b43b-4220-b47d-d6563656cdb4/TrainingGrounds_MasterLogo.png" alt="Training Grounds">
-      <p>Where passion, creativity and community come together to create a martial arts experience like no other.</p>
+      <img src="logo.svg" alt="Training Grounds">
+      <p>Empowering martial artists in our community with world-class instruction and a supportive training environment.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#classes">Classes</a></li>
+        <li><a href="womens.html">Women's Programs</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <p style="margin-bottom: 20px; font-size: 0.88rem;">Follow us on social media for updates and training tips.</p>
       <div class="social-links">
-        <a href="http://instagram.com/traininggrounds" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-        <a href="https://www.facebook.com/tgcrowsnest" target="_blank" title="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.47h3.047v-2.642c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385c5.738-.9 10.126-5.864 10.126-11.854z"/></svg></a>
+        <a href="https://instagram.com/traininggrounds" title="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.646.069 4.85 0 3.204-.012 3.584-.07 4.85-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+          </svg>
+        </a>
+        <a href="https://facebook.com/traininggrounds" title="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
       </div>
-    </div>
-    <div class="footer-col">
-      <h4>Explore</h4>
-      <ul>
-        <li><a href="timetable.html">Timetable</a></li>
-        <li><a href="coaches.html">Meet the Coaches</a></li>
-        <li><a href="kids.html">TG Kids Academy</a></li>
-        <li><a href="womens.html">Women's Self Defence</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Get Started</h4>
-      <ul>
-        <li><a href="join.html">Membership Options</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="join.html">Free Trial</a></li>
-      </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    &copy; 2026 Training Grounds Martial Arts. All rights reserved.
+    <p>&copy; 2026 Training Grounds Martial Arts. All rights reserved.</p>
   </div>
 </footer>
 
 <script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+  // Mobile menu toggle
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Close menu when link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+    });
+  });
+
+  // Fade-in animation observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(element => {
+    observer.observe(element);
+  });
 </script>
 </body>
-</html>6�E���6�E���
+</html>
