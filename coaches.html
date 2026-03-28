@@ -152,290 +152,342 @@
 
   .btn-warm {
     display: inline-block; background: var(--warm-accent); color: var(--charcoal);
-    padding: 16px
+    padding: 16px 44px; border-radius: 6px; text-decoration: none;
+    font-weight: 700; font-size: 0.85rem; letter-spacing: 0.06em;
+    text-transform: uppercase; transition: all 0.3s;
+  }
+  .btn-warm:hover {
+    background: #fff; transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(201,168,124,0.3);
+  }
 
-ÈÜ\\Y]\Î
-È^YXÛÜ][ÛÛNÂÛ]ÙZYÚ
-ÌÈÛ\Ú^N
-\[NÈ]\\ÜXÚ[Î
-[NÂ^][ÙÜN\\Ø\ÙNÈ[Ú][Û[ÜÎÂB]Ø\NÝ\ÂXÚÙÜÝ[ÙÈ[ÙÜN[Û]VJL
-NÂÞ\ÚYÝÎÌØJKMLÊNÂBÝK\ÙXÝ[ÛÂXÚÙÜÝ[\KXÚ\ÛØ[
-NÈ^X[YÛÙ[\ÂÜÚ][Û[]]NÈÝ\ÝÎY[ÂBÝK\ÙXÝ[ÛYÜHÂÛÛ[	ÉÎÈÜÚ][ÛXÛÛ]NÈÜML	NÈYÚL	NÂÚY
-ÈZYÚ
-ÂXÚÙÜÝ[YX[YÜYY[
-Ú\ÛKØJKML
-H	K[Ü\[
-Ì	JNÂBÝKXÛÛ[ÂÜÚ][Û[]]NÈZ[^NÈX^]ÚY
-LÈX\Ú[]]ÎÂBÝKXÛÛ[ÂÛY[Z[N	ÐX\È]YIËØ[Ë\Ù\YÈÛ\Ú^NË[NÂÛ]ÙZYÚ
-ÈÛÛÜÙÈX\Ú[XÝÛNMÂ[KZZYÚNÈ]\\ÜXÚ[Î[NÂBÝKXÛÛ[ÂÛ\Ú^NK
-\[NÈÛÛÜØJMKMKMKJNÂX\Ú[XÝÛN
-ÈÛ]ÙZYÚÌÈ[KZZYÚKÂBÛÝ\ÂXÚÙÜÝ[ÌMLMLMNÈÛÛÜØJMKMKMKJNÂY[Î
-
-ÂBÛÝ\Z[\ÂX^]ÚYLÈX\Ú[]]ÎÈ\Ü^NÜYÂÜY][\]KXÛÛ[[ÎYYÈØ\
-ÂBÛÝ\X[[YÈÈZYÚ
+  .cta-section {
+    background: var(--charcoal); text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: ''; position: absolute; top: -50%; right: -20%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,168,124,0.08) 0%, transparent 70%);
+  }
+  .cta-content {
+    position: relative; z-index: 1; max-width: 650px; margin: 0 auto;
+  }
+  .cta-content h2 {
+    font-family: 'Bebas Neue', sans-serif; font-size: 3.4rem;
+    font-weight: 400; color: #fff; margin-bottom: 16px;
+    line-height: 1; letter-spacing: 0.02em;
+  }
+  .cta-content p {
+    font-size: 1.05rem; color: rgba(255,255,255,0.5);
+    margin-bottom: 40px; font-weight: 300; line-height: 1.8;
+  }
 
-ÈÜXÚ]N
-NÈX\Ú[XÝÛNNÈBÛÝ\X[ÈÛ\Ú^N[NÈ[KZZYÚKÎÈX^]ÚYÍÈÛ]ÙZYÚÌÈBÛÝ\XÛÛ
-ÂÛY[Z[N	ÐX\È]YIËØ[Ë\Ù\YÈÛÛÜÙÂÛ\Ú^NK\[NÈÛ]ÙZYÚ
-È]\\ÜXÚ[Î[NÈX\Ú[XÝÛNÂBÛÝ\XÛÛ[È\Ý\Ý[NÛNÈBÛÝ\XÛÛ[HÈX\Ú[XÝÛNLÈBÛÝ\XÛÛ[HÂÛÛÜØJMKMKMK
-NÈ^YXÛÜ][ÛÛNÂÛ\Ú^N
-\[NÈÛ]ÙZYÚÌÈ[Ú][ÛÛÛÜÜÎÂBÛÝ\XÛÛ[NÝ\ÈÛÛÜ\K]Ø\KXXØÙ[
-NÈBÛØÚX[[[ÜÈÈ\Ü^N^ÈØ\LÈX\Ú[]ÜÈBÛØÚX[[[ÜÈHÂÚYÎÈZYÚÎÈÜ\\Y]\ÎÂXÚÙÜÝ[ØJMKMKMK
-NÈ\Ü^N^Â[YÛZ][\ÎÙ[\È\ÝYKXÛÛ[Ù[\Â^YXÛÜ][ÛÛNÈ[Ú][Û[ÜÎÂBÛØÚX[[[ÜÈHÝÈÂÚYNÈZYÚNÈ[ØJMKMKMKJNÂ[Ú][Û[ÜÎÂBÛØÚX[[[ÜÈNÝ\ÈXÚÙÜÝ[\K]Ø\KXXØÙ[
-NÈBÛØÚX[[[ÜÈNÝ\ÝÈÈ[\KXÚ\ÛØ[
-NÈBÛÝ\XÝÛHÂX^]ÚYLÈX\Ú[
+  footer {
+    background: #151515; color: rgba(255,255,255,0.5);
+    padding: 64px 40px 28px;
+  }
+  .footer-inner {
+    max-width: 1240px; margin: 0 auto; display: grid;
+    grid-template-columns: 2fr 1fr 1fr; gap: 48px;
+  }
+  .footer-brand img { height: 44px; opacity: 0.85; margin-bottom: 18px; }
+  .footer-brand p { font-size: 0.88rem; line-height: 1.7; max-width: 340px; font-weight: 300; }
+  .footer-col h4 {
+    font-family: 'Bebas Neue', sans-serif; color: #fff;
+    font-size: 1.1rem; font-weight: 400; letter-spacing: 0.08em; margin-bottom: 20px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul a {
+    color: rgba(255,255,255,0.4); text-decoration: none;
+    font-size: 0.85rem; font-weight: 300; transition: color 0.3s;
+  }
+  .footer-col ul a:hover { color: var(--warm-accent); }
+  .social-links { display: flex; gap: 12px; margin-top: 24px; }
+  .social-links a {
+    width: 38px; height: 38px; border-radius: 8px;
+    background: rgba(255,255,255,0.06); display: flex;
+    align-items: center; justify-content: center;
+    text-decoration: none; transition: all 0.3s;
+  }
+  .social-links a svg {
+    width: 18px; height: 18px; fill: rgba(255,255,255,0.5);
+    transition: fill 0.3s;
+  }
+  .social-links a:hover { background: var(--warm-accent); }
+  .social-links a:hover svg { fill: var(--charcoal); }
+  .footer-bottom {
+    max-width: 1240px; margin: 44px auto 0; padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    text-align: center; font-size: 0.75rem;
+    color: rgba(255,255,255,0.25); letter-spacing: 0.03em;
+  }
 
-]]ÈÈY[Ë]ÜÂÜ\]Ü\ÛÛYØJMKMKMK
-NÂ^X[YÛÙ[\ÈÛ\Ú^NÍ\[NÂÛÛÜØJMKMKMKJNÈ]\\ÜXÚ[ÎÙ[NÂBYYXH
-X^]ÚYM
-HÂYÙKZXY\HÈÛ\Ú^NÜ[NÈBÛÝ\Z[\ÈÜY][\]KXÛÛ[[ÎYÈØ\ÌÈBÙXÝ[Û]]HÈÛ\Ú^N[NÈBÝKXÛÛ[ÈÛ\Ú^N[NÈBÛØXÚ\ËYÜYÈÜY][\]KXÛÛ[[Î\X]
-]]ËY[Z[X^
-ÌYJNÈBBYYXH
-X^]ÚY
-Í
-HÂ][[ÜÈÈ\Ü^NÛNÈB[Ø[K[Y[KXÈ\Ü^N^ÈB][[ÜËÜ[Â\Ü^N^È^Y\XÝ[ÛÛÛ[[ÈÜÚ][ÛXÛÛ]NÂÜL	NÈYÈYÚÂXÚÙÜÝ[ØJÌÌÌN
-NÂXÚÙÜY[\\M
-NÈY[Î
-ÈØ\NÂÜ\XÝÛN\ÛÛYØJMKMKMK
-NÂBÙXÝ[ÛÈY[Î
-ÌÈB]Z[\ÈY[ÎMÈBYÙKZXY\ÈY[ÎM
-ÈBÛØXÚ\ËYÜYÈÜY][\]KXÛÛ[[ÎYÈBBYKZ[ÂÜXÚ]NÈ[ÙÜN[Û]VJ
-NÂ[Ú][Û[ÜÈÝXXËX^Y\K
-
-KM
-NÂBYKZ[\ÚXHÈÜXÚ]NNÈ[ÙÜN[Û]VJ
-NÈBÜÝ[OÚXYÙO]]Û\ÜÏH]Z[\HYH[^[Û\ÜÏH][ÙÛÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÌXÍNÎMKXØMX
-ÙY
-MÍMÙÕZ[[ÑÜÝ[×ÓX\Ý\ÙÛËÈ[HZ[[ÈÜÝ[ÈØO[Û\ÜÏH][[ÜÈYH][ÜÈOHYH[^[ÛYOØOÛOOHYH[Y]XK[[Y]XOØOÛOOHYHÛØXÚ\Ë[Û\ÜÏHXÝ]HÛØXÚ\ÏØOÛOOHYHÚYË[ÚYÈXØY[^OØOÛOOHYHÛÛY[Ë[ÛÛY[ÜÈÙ[Y[ÙOØOÛOOHYHÛÛXÝ[ÛÛXÝØOÛOOHYHÚ[[Û\ÜÏH]XÝHÚ[ÝÏØOÛOÝ[]ÛÛ\ÜÏH[Ø[K[Y[KXÛÛXÚÏHØÝ[Y[Ù][[Y[RY
-	Û][ÜÉÊKÛ\ÜÓ\ÝÙÙÛJ	ÛÜ[ÊHÜ[ÜÜ[Ü[ÜÜ[Ü[ÜÜ[Ø]ÛÙ]Û]]Û\ÜÏHYÙKZXY\Û\ÜÏHÙXÝ[Û[X[Ý\X[OÜOYY]HÛØXÚ\ÏÚOÝ\YXØ]YÛØXÚ[ÈX[KYHXYÛØXÚØÛÝ[ÜÈHÙX[Ù^\Y[ÙK\ÜÚ[Û[X\È]\][ÈÙHËZ\ÛÛ[Z]Y[ÈÚÚ[ÜX]]]K[ÛÛXÝ[Û\ÈÚ]XZÙ\ÈZ[[ÈÜÝ[È[ÜH[\ÝHXÙHÈZ[ÜÙ]ÙXÝ[Û]Û\ÜÏHÛØXÚ\ËYÜY]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÍÙ
-ÍNLËYMMNMM
-ÙLNKÔØÜY[ÚÝ
-ÌKL
-LÊØ]
-ÎKNLÊØ[KÈ[HØÛÝ\[[Ù]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙHXYÛØXÚ	[\ÈÝ[\ÜÜ[ÏØÛÝ\[[ÚÏÛ\ÜÏH\ØÚ\[\È]X^HZKÞ[ËSPOÜÛ\ÜÏH[ÈØÛÝ\ÈÛHÙHÜYÚ[[Ý[\ÈÙZ[[ÈÜÝ[È[HXÚÈ[[^[X[]KR]ÝKÚ]HY\\ÜÚ[ÛÜ]X^HZKÚXÚØÞ[ËÞ[Ë[SPKHÝÛÈYØØ]HÜHXÛÛÙÚXØ[\ØXÚÈÛØXÚ[ËHÜX]\È[[ZXËØ[YKX\ÙYZ[[ÈÙ[YÛ^Ü][ÛY\X[]K[X[]ÛÜ\XØ][ÛØÛÝ[Y]\ÈX\X[\ÈÚÝ[HÝXÝXØ[[[ÞXXK[[È[ÜH]H\ÚXØ[KY[[K[[[Ý[Û[KÜÙ]Ù]]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÍX
-LXÍY
-NNMXËNKMÙÌYLNYØÎKÔØÜY[ÚÝ
-ÌKL
-LÊØ]
-ÎKNK
-Ø[KÈ[H[ZYHYHÙ]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙHXYÞ[ÈÛØXÚÜÜ[Ï[ZYHYOÚÏÛ\ÜÏH\ØÚ\[\ÈÞ[Ë]X^HZKSPKÜÛ\ÜÏH[È[ZYH\ÈÝ\XYÞ[ÈÛØXÚ[Ú[ÈYX\ÈÙ^\Y[ÙH[]X^HZKSPK[[Ü\YHXÙHYH[ÝY\È[HY[YÙH]][[H\\Ë\ÈÝHÜX\X[\È[ÈY\ÛÝÛÜ\ÈØ[H[\ÞH[ÛÛ[Z]Y[ÈÜX][ÈHÙ[ÛÛZ[ÈÜXÙK[ZYH\ÈHYÈ\ÙÚ]XZÙ\ÈHXH]Z[[ÈÜÝ[ÈÛÈÜXÚX[ÜÙ]Ù]]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÌL
-XXLÙNXKM
-LÌX
-ØKMØXL
-ÍKÔØÜY[ÚÝ
-ÌKL
-LÊØ]
-ÎKNK
-ÊØ[KÈ[HØ^[HZ[\Ù]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙHÈÚYÈXØY[^OÜÜ[ÏØ^[HZ[\ÚÏÛ\ÜÏH\ØÚ\[\ÈÚYÈÜÛ\ÜÏH[ÈØ^[H\ÈÝ\YXØ]YÚYÈÛØXÚÛÝÛÜ\ÈÝYÚ[\ØXÚ[Ù[Z[HØ\HÜXXÚÚ[	ÜÈÝ\^K\ÈZ[[È[ÜÛÜHÙ[\ÈÛ]Y[ÙKÚ[\ÜË[Z[È[H\Ù[Ú]HÝ\È[ÜÝ\È\ÜÚ[ÈÛÛÝÛYÙK\\[ÈÜÝÝ[Ù[X][ÈHÚ[È[ÛÜÚYH\ÈÝY[ËÜÙ]Ù]]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÎM
-MÙ
-ËXYM
-
-XMLKLØMÍÌÌÍMLÔØÜY[ÚÝ
-ÌKL
-LÊØ]
-ÎKNK
-Ø[KÈ[H\ÛÛÙ[HÙ]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙHÞ[ÈÛØXÚÜÜ[Ï\ÛÛÙ[OÚÏÛ\ÜÏH\ØÚ\[\ÈÞ[ÏÜÛ\ÜÏH[È\ÛÛ\ÈÛHÙÝ\YXØ]YÞ[ÈÛØXÚ\ËÛÝÛÜ\ÈØ[H\Ù[ÙH[Ù[Z[HÛÛXÝ[ÛÚ]\ÈÝY[ËÜYÚ[[H]ÛÈÞ[ÈÈZ[ÛÛY[ÙK\ÛÛÙ[ÛÈXY[H][\HÞ[ÈÛ[Ý[ÛÈ\[È\ÈØ\Y\Ú][Ý]]\È[H[ÜÝÝÈ\ÈÚ][ÈXÚÈ[Ø]Ú[ÈÝY[ÈÜÝÈ[]ÛKÜÙ]Ù]]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÌYYÎYXËLMKM
-ÍXXLÎXYYØËÔØÜY[ÚÝ
-ÌKL
-LÊØ]
-ÎKNKN
-Ø[KÈ[H\Ý[\ÜÙ[Ù]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙH	[\ÈÜ\Ý[ÈÛØXÚÜÜ[Ï\Ý[\ÜÙ[ÚÏÛ\ÜÏH\ØÚ\[\ÈÜ\Ý[ÏÜÛ\ÜÏH[È\Ý[\ÈÛHÙÝ\^[X[]KR]ÝH[Ü\Ý[ÈÛØXÚ\Ë[Ú[ÈÚ\XÚ\]YKÛÛÙ[[Ý\[X[\ÜÚ[ÛÈ]\HÛ\ÜËÚ]ÛÛ\]][ÛYY[È[YX\ÈÙ^\Y[ÙHÛHX]Ë\Ý[ÜÈ[ÜÛÜH\ÈÚ[\N\ÝÚÝÈ\IÜÈ][HHÙÜ\ÜÈHÙY\È[\ÈÝY[ËÜÙ]Ù]]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKØXÍÌÌMKMMKXMYYØÙMLXLÍÒSQ×ÌÍÎKÈ[H[\ÙHXÚÙ\HÙ]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙHÛÛY[ÜÈ	[\ÈÙ[Y[ÙOÜÜ[Ï[\ÙHXÚÙ\OÚÏÛ\ÜÏH\ØÚ\[\ÈÛÛY[ÜÈÙ[Y[ÙOÜÛ\ÜÏH[È[\ÙH\ÈÝ\ÛÛY[ÜÈÛØXÚ[ÛÛY[ÜÈÙ[QY[ÙH[ÝXÝÜÚ]H\ÜÚ[ÛÜ[\ÝÙ\[ÈÝ\ÈÝYÚ[Ý[Y[[Z[Ù]Ú]HXÚÙÜÝ[[[ÙH[Ý\ÛÈXØY\ÈÙXXÚ[È^\Y[ÙKÚH[ÜÈÜX]]]K[\]K[[\ÞHÈ]\HÛ\ÜË\[ÜÛÜOÈH[Ý\ÝÛX\ÝXÚø %ÙÜ\ÜÈ\È\ÛÛ[ÜÙ]Ù]]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÌNYXN
-YM
-XXNMXÙØÙY
+  @media (max-width: 960px) {
+    .page-header h1 { font-size: 3rem; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .section-title { font-size: 2.4rem; }
+    .cta-content h2 { font-size: 2.4rem; }
+    .coaches-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: flex; }
+    .nav-links.open {
+      display: flex; flex-direction: column; position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: rgba(30, 30, 30, 0.98);
+      backdrop-filter: blur(16px); padding: 24px 40px; gap: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    section { padding: 72px 24px; }
+    .nav-inner { padding: 14px 24px; }
+    .page-header { padding: 140px 24px 60px; }
+    .coaches-grid { grid-template-columns: 1fr; }
+  }
+  .fade-in {
+    opacity: 0; transform: translateY(20px);
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/21c58c95-b43b-4220-b47d-d6563656cdb4/TrainingGrounds_MasterLogo.png" alt="Training Grounds">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="timetable.html">Timetable</a></li>
+      <li><a href="coaches.html" class="active">Coaches</a></li>
+      <li><a href="kids.html">Kids Academy</a></li>
+      <li><a href="womens.html">Women's Self Defence</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="join.html" class="nav-cta">Join Now</a></li>
+    </ul>
+    <button class="mobile-menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="page-header">
+  <p class="section-label">Our Team</p>
+  <h1>Meet the Coaches</h1>
+  <p>Our dedicated coaching team, led by Head Coach Scott, brings a wealth of experience, passion, and heart to everything we do. Their commitment to skill, creativity, and connection is what makes Training Grounds more than just a place to train.</p>
+</div>
 
-LXÔØÜY[ÚÝ
-ÌKL
-LÊØ]
-ÎKNKÌÊØ[KÈ[H][X^ÝYY\Ù]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙHÞ[È	[\È]X^HZHÛØXÚÜÜ[Ï][X^ÝYY\ÚÏÛ\ÜÏH\ØÚ\[\ÈÞ[Ë]X^HZOÜÛ\ÜÏH[È][ÜÈÝ\^H[ÈX\X[\ÈYØ[]H[ÙHYØHÙX\ÛÛÚ[ÙHÚ[[ÈZ[[ÈÜÝ[ËH\ØÛÝ\Y\ÈØ[[È\ÈHÛØXÚ\ÈZ[[È[ÜÛÜHÙ[\ÈÛ]X[]HÝ\]X[]x %Ú\[[Ý\ÚÚ[È\Ý[Z[H[[Ú]KIÜÈ][HHÜÚ]]H[\XÝX\X[\È\ÈÛ[ÜIÜÈ]\ËÜÙ]Ù]]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÌYXÌÌÙYNNMÎYXËNLMÌNLÌÙXÔØÜY[ÚÝ
-ÌKL
-LÊØ]
-ÎKNK
-JØ[KÈ[HÚÙ]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙH]X^HZHÛØXÚÜÜ[ÏÚÚÏÛ\ÜÏH\ØÚ\[\È]X^HZOÜÛ\ÜÏH[ÈÚ[ÜÈH[^YXKÝÙY][\ËÚ\ÚÚ[Ë[YX\ÈÙ\ÜÚ[ÛÜX\X[\ÈÈ]\HÙ\ÜÚ[Û\ÈZ[[È[ÜÛÜH\ÈÚ[\NÚÝÈ\Ý^H]Y[[[ÞHHØÙ\ÜËHÝ\È[[È[ÜHÜÝÈ[ÈH\Ý\Ú[ÛÙ[\Ù[\ËÝÛ[ÙHX]ËÜÙ]Ù]]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÎXÙÌÙMNM
-NKXXØÍMMÎN
-MXMÔØÜY[ÚÝ
-ÌKL
-LÊØ]
-ÌLK
-ÌØ[KÈ[H]H\ÝÈÙ]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙH]X^HZHÛØXÚÜÜ[Ï]H\ÝÏÚÏÛ\ÜÏH\ØÚ\[\È]X^HZOÜÛ\ÜÏH[È]H[ÜÈXØY\ÈÙ^\Y[ÙH[HY\\ÜÚ[ÛÜ]X^HZHÈ]\HÙ\ÜÚ[ÛHYØ[Z[[È[NNM[\ÈÜ[YX\ÈÛ[È\ÈÜY[HRË]\Ý[XK[Z[[Z[Y[\ÛÈÙHRÉÜÈ[ÜÝ\ÜXÝY]X^HZHX\Ý\Ë]HÜX]\È[[\ÛY[Ú\HÝY[ÈÙ[][ÈØ[Z[ÛÛY[ÙH[Ú\[Z\ÚÚ[ËÜÙ]Ù]]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÌYM
-YMÌLKM
-ØNMÎMÌÙÍÎÔÕËLKL
-L
-ËLMM
-ËLKÈ[H][[ÛÜHÙ]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙHY[È	[\ÈÚYÈÛØXÚÜÜ[Ï][[ÛÜOÚÏÛ\ÜÏH\ØÚ\[\ÈÚYÏÜÛ\ÜÏH[È][Ý\Y\ÈÝ\^HYÚ\H]Z[[ÈÜÝ[ÈY\Z[È[Ü\YH\ÈYZ[[È]HÜYÚ[[ËÝÈHÙ^H\ÙHÚYÈ[Y[ÈÙÜ[K][[ÜÈ[\ÞK[]X[]K[X\È]\HÙ\ÜÚ[ÛHÝ\ÈÙYZ[ÈHÚYÈ[\ÝHÙYZÈHÙYZËÜÙ]Ù]]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÌÎ
-MMÎNNMÙXLÎXMØNMØLØÔØÜY[ÚÝ
-ÌKL
-LNJØ]
-ÎKKLØ[KÈ[HÙX\ÝY[X\Ù]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙHÈÚYÈ\ÜÚ\Ý[ÛØXÚÜÜ[ÏÙX\ÝY[X\ÚÏÛ\ÜÏH\ØÚ\[\È]X^HZKÞ[ËÚYÏÜÛ\ÜÏH[ÈÙXÜXÚX[\Ù\È[]X^HZH[Þ[Ë[Ú[È\ÜÚ[ÛX\[^\Y[ÙH^[Û\ÈYX\ÈÈ]\HÙ\ÜÚ[ÛÚ]HXÚÙÜÝ[[ÛÛ\]]]HÚXÚØÞ[È[ÛY[ÈÐRÓÈ][Û[È[[[ÜÛÜË\ÈÛØXÚ[È[ÜÛÜH\ÈÜÝ[YÚ]HL	HÙÚ]]\[ÝH]H]^KÜÙ]Ù]]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÌLLYËMLM
-YLXÍXÙ
+<section>
+  <div class="coaches-grid">
 
-MMLXMÔØÜY[ÚÝ
-ÌKL
-LNJØ]
-ÎKKMJØ[KÈ[HY\Û[HÙ]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙHÈÚYÈ\ÜÚ\Ý[ÛØXÚÜÜ[ÏY\Û[OÚÏÛ\ÜÏH\ØÚ\[\È]X^HZKÚYÏÜÛ\ÜÏH[ÈYÝ\YZ[[È]X^HZH]M][HHÚ[ÛÙX[HÙXÛÛZ[ÈZÙH]X[ÝÈZ[[È[Ý]X^HZH[H[ÜÈHÝÛËÜÝ[Y\Ù[ÙHÈHX]Ë\È[\ÜÚ\Ý[ÛØXÚY[È\ÜÙH[ÝZY[ÈH^Ù[\][ÛÚ]\ÜXÝ[\Ú[Y[ÙKÜÙ]Ù]]Û\ÜÏHÛØXÚXØ\YKZ[]Û\ÜÏHÛØXÚZ[YÈ[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÌYMÍXËLYKMXÙKXML
-XLËÝ[\[XYÙLV\ÞTÈ[HÙXÚÚÝ]Ù]]Û\ÜÏHÛØXÚZ[ÈÜ[Û\ÜÏHÛKXYÙHÈÚYÈ\ÜÚ\Ý[ÛØXÚÜÜ[ÏÙXÚÚÝ]ÚÏÛ\ÜÏH\ØÚ\[\È]X^HZKÚYÏÜÛ\ÜÏH[ÈÙXÜÈÝ\^HYØ[Y\\ØÛÝ\[È]X^HZHÛÛØÚX[YYXKÜ\Ú[ÈHY\\ÜÚ[ÛÜX\X[\ËIÜÈÛÛHÛÈZÙH\ÝXÙH[H]H]ÝHÛÛ\]][Û[YX]Y\ÈZ[[È[ÜÛÜH\ÈZ[ÛÛÛÚ\Ý[ÞK[H]\ÈÛÚ][ÈÝ\ÈHÜÜ[]HÈX\]ÈÚÚ[ËÜÙ]Ù]Ù]ÜÙXÝ[ÛÙXÝ[ÛÛ\ÜÏHÝK\ÙXÝ[Û]Û\ÜÏHÝKXÛÛ[YKZ[ÛÛYH[ÙYHÚ]ÙIÜH[XÝ]ÚÝ\Ú]HÛHÙYZÈYHX[	Y\ÚÈÈÛÛ[Z]Y[\ÝÛÛYHZ[[^\Y[ÙHHÛÛ[][]HÜ[Ý\Ù[ÜHYHÚ[[Û\ÜÏH]Ø\HYÚ\Ý\Ü[Ý\YHX[ØOÙ]ÜÙXÝ[ÛÛÝ\]Û\ÜÏHÛÝ\Z[\]Û\ÜÏHÛÝ\X[[YÈÜÏHÎËÚ[XYÙ\ËÜ]X\\ÜXÙKXÙÛÛKØÛÛ[ÝKÍÌYÙYLÌ
-
-ÌÌKÌXÍNÎMKXØMX
-ÙY
-MÍMÙÕZ[[ÑÜÝ[×ÓX\Ý\ÙÛËÈ[HZ[[ÈÜÝ[ÈÚ\H\ÜÚ[ÛÜX]]]H[ÛÛ[][]HÛÛYHÙÙ]\ÈÜX]HHX\X[\È^\Y[ÙHZÙHÈÝ\Ü]Û\ÜÏHÛØÚX[[[ÜÈHYHËÚ[ÝYÜ[KÛÛKÝZ[[ÙÜÝ[È\Ù]HØ[È]OH[ÝYÜ[HÝÈY]ÐÞH]HLLMØÌË
-ËN
-L
-
-K
-ÈËLM
-ÍÌHKLH
-LNH
-LNK
-NKK
-HK
-K
-H
-
-HË
-KKLËN
-K
-H
-
-KKMHËKLK
-ÍÌKMLNH
-LNKLK
-NLK
-
-ËM
-K
-ËLË
-LËN
-KLM
-KK
-ËLËKMKMÍÌKLKNKMLNKMLK
-NLKKK
-ËLK
-K
-ËM
-HLË
-LËLËNË
-ËM
-KMKLËÈKMÍÌH
-LNKMLNHKK
-MÈK
-KK
-H
-
-KK
-^LLMØËLËNHLËËMMM
-Ë
-ÌMÍNMÎNMN
-NK
-NHKKK
-ÌÈKKK
-ÌÈ
-MËNKMË
-Ì
-M
-ÍNN
-Î
-N
-NKK
-NKK
-Ì
-M
-ÌËNHËKM
-MK
-Ì
-ÍMK
-ÎLN
-MÎKMN
-NKLK
-ÌËLKK
-ÌËMMLËNKKMLËËK
-ÌMM
-ËKNMMÍMLMËMÎMMÎKMNLKKK
-NKLKKK
-ÌËMMKK
-ÌÞL
-KÎËLËÈMMÍNKMM
-MÌÍNH
-MÈ
-M
-MÈ
-MLÍNH
-MMMØÌLËËLÍNKMMMMMMLLMËLHMLKÎKMMLHKÎLKM
-MÍKÎLH
-
-ÌKLKÎLH
-M
-M
-LLK
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/4d3d7593-e608-426d-88db-656d7f5008a9/Screenshot+2025-06-03+at+9.18.53+am.jpg" alt="Scott Ireland">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">Head Coach &amp; Founder</span>
+        <h3>Scott Ireland</h3>
+        <p class="disciplines">BJJ, Muay Thai, Boxing, MMA</p>
+        <p class="bio">Scott is one of the original founders of Training Grounds and a black belt in Brazilian Jiu-Jitsu, with a deep passion for Muay Thai, Kickboxing, Boxing, and MMA. A strong advocate for the ecological approach to coaching, he creates dynamic, game-based training centred on exploration, adaptability, and real-world application. Scott believes martial arts should be both practical and enjoyable, helping people thrive physically, mentally, and emotionally.</p>
+      </div>
+    </div>
 
-XËKÎMLK
-K
-KLK
-HK
-Ë
-HK
-K
-HK
-ËÎMHKÎKK
-HKÎKLK
-ËK
-LK
-LKÎKLK
-ÏÜÝÏØOHYHÎËÝÝÝËXÙXÛÚËÛÛKÝØÜÝÜÛ\Ý\Ù]HØ[È]OHXÙXÛÚÈÝÈY]ÐÞH]HLL
-ÌØÌMËMKÍÌËLLLLLLËLL
-KÍÌËLLLÌ
-KNH
-ÎLMMLLHLK
-MNÎ
-ZLË
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/5b4501c6-d598-4f1c-88da-7f31e19d3c8a/Screenshot+2025-06-03+at+9.19.00+am.jpg" alt="Jamie Rae">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">Head Boxing Coach</span>
+        <h3>Jamie Rae</h3>
+        <p class="disciplines">Boxing, Muay Thai, MMA, BJJ</p>
+        <p class="bio">Jamie is our Head Boxing Coach bringing years of experience in Muay Thai, MMA, and BJJ. Inspired by Bruce Lee movies and the Teenage Mutant Ninja Turtles, his love for martial arts runs deep. Known for his calm energy and commitment to creating a welcoming space, Jamie is a big part of what makes the vibe at Training Grounds so special.</p>
+      </div>
+    </div>
 
-ÝLË
-ÚË
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/105b2d9b-3e9a-4532-b87a-4cb49a042361/Screenshot+2025-06-03+at+9.19.07+am.jpg" alt="Wayne Miller">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">TG Kids Academy</span>
+        <h3>Wayne Miller</h3>
+        <p class="disciplines">Kids BJJ</p>
+        <p class="bio">Wayne is our dedicated Kids BJJ Coach, known for his thoughtful approach and genuine care for each child's journey. His training philosophy centres on patience, kindness, and being fully present. What he loves most is passing on knowledge, nurturing growth, and celebrating the wins alongside his students.</p>
+      </div>
+    </div>
 
-ÝLÌLË
-ÈKÎLMH
-LÌËMHKÌL
-ÍH
-Í]MLÚLKLMËLKLHLKMMLKLKMMK
-ÍZËÌKLÌË
-ÚLÎMÎ
-XÍKÌÎKHLLMK
-LLLLK
-MÏÜÝÏØOÙ]Ù]]Û\ÜÏHÛÝ\XÛÛ
-^ÜOÚ
-[OHYH[Y]XK[[Y]XOØOÛOOHYHÛØXÚ\Ë[YY]HÛØXÚ\ÏØOÛOOHYHÚYË[ÈÚYÈXØY[^OØOÛOOHYHÛÛY[Ë[ÛÛY[ÜÈÙ[Y[ÙOØOÛOÝ[Ù]]Û\ÜÏHÛÝ\XÛÛ
-Ù]Ý\YÚ
-[OHYHÚ[[Y[X\Ú\Ü[ÛÏØOÛOOHYHÛÛXÝ[ÛÛXÝ\ÏØOÛOOHYHÚ[[YHX[ØOÛOÝ[Ù]Ù]]Û\ÜÏHÛÝ\XÝÛH	ÛÜNÈZ[[ÈÜÝ[ÈX\X[\Ë[YÚÈ\Ù\YÙ]ÙÛÝ\ØÜ\ÛÛÝØÙ\\H]È[\ÙXÝ[ÛØÙ\\
-[Y\ÊHOÂ[Y\ËÜXXÚ
-[HOÂY
-[K\Ò[\ÙXÝ[ÊHÈ[K\Ù]Û\ÜÓ\ÝY
-	Ý\ÚXIÊNÈBJNÂKÈ\ÚÛKÛÝX\Ú[	ÌLÌ	ÈJNÂØÝ[Y[]Y\TÙ[XÝÜ[
-	ËYKZ[ÊKÜXXÚ
-[OØÙ\\ØÙ\J[
-JNÂÜØÜ\ØÙOÚ[
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/89457d07-aff8-4484-a611-3a7732756092/Screenshot+2025-06-03+at+9.19.24+am.jpg" alt="Jason Kelly">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">Boxing Coach</span>
+        <h3>Jason Kelly</h3>
+        <p class="disciplines">Boxing</p>
+        <p class="bio">Jason is one of our dedicated Boxing Coaches, known for his calm presence and genuine connection with his students. Originally drawn to boxing to build confidence, Jason went on to headline multiple boxing promotions during his career. What motivates him most now is giving back and watching students grow and evolve.</p>
+      </div>
+    </div>
+
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/1f9dc9ec-2fe5-4766-aa38-baff1f22dd3c/Screenshot+2025-06-03+at+9.19.18+am.jpg" alt="Tristan Hessell">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">BJJ &amp; Wrestling Coach</span>
+        <h3>Tristan Hessell</h3>
+        <p class="disciplines">BJJ, Wrestling</p>
+        <p class="bio">Tristan is one of our Brazilian Jiu-Jitsu and Wrestling coaches, bringing sharp technique, good humour, and real passion to every class. With competition medals and years of experience on the mats, Tristan's philosophy is simple: just show up. He's driven by the progress he sees in his students.</p>
+      </div>
+    </div>
+
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/ac728315-4d2d-4229-ba5d-d23ce51a2276/IMG_2379.jpg" alt="Janise Huckerby">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">Women's BJJ &amp; Self Defence</span>
+        <h3>Janise Huckerby</h3>
+        <p class="disciplines">Women's BJJ, Self Defence</p>
+        <p class="bio">Janise is our Women's BJJ coach and Women's Self-Defence instructor with a passion for empowering others through movement and mindset. With a background in dance and over two decades of teaching experience, she brings creativity, empathy, and energy to every class. Her philosophy? Be your own yardstickâprogress is personal.</p>
+      </div>
+    </div>
+
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/182b5fdf-a85f-46ab-b596-b3fcced4411b/Screenshot+2025-06-03+at+9.19.33+am.jpg" alt="Nathan Mazoudier">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">Boxing &amp; Muay Thai Coach</span>
+        <h3>Nathan Mazoudier</h3>
+        <p class="disciplines">Boxing, Muay Thai</p>
+        <p class="bio">Nathan's journey into martial arts began at the end of a rugby season. Since joining Training Grounds, he discovered his calling as a coach. His training philosophy centres on quality over quantityâsharpen your skills first, then build the intensity. He's driven by the positive impact martial arts has on people's lives.</p>
+      </div>
+    </div>
+
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/2edac33f-e98d-4c9f-b483-8124171933eb/Screenshot+2025-06-03+at+9.19.45+am.jpg" alt="John J">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">Muay Thai Coach</span>
+        <h3>John J</h3>
+        <p class="disciplines">Muay Thai</p>
+        <p class="bio">John J brings a relaxed vibe, sweet tunes, sharp skills, and years of passion for martial arts to every session. His training philosophy is simple: show up, stay patient, and enjoy the process. He loves helping people grow into the best version of themselves, both on and off the mats.</p>
+      </div>
+    </div>
+
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/9cf8c3ff-580d-458e-acc4-6978e8d55a6f/Screenshot+2025-06-03+at+11.46.32+am.jpg" alt="Dave Barlow">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">Muay Thai Coach</span>
+        <h3>Dave Barlow</h3>
+        <p class="disciplines">Muay Thai</p>
+        <p class="bio">Dave brings decades of experience and a deep passion for Muay Thai to every session. He began training in 1996 and has spent years honing his craft in the UK, Australia, and Thailand. Trained under two of the UK's most respected Muay Thai masters, Dave creates an environment where students of all levels can build confidence and sharpen their skills.</p>
+      </div>
+    </div>
+
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/09f945f6-7011-487b-978f-4303f362782b/PHOTO-2025-04-07-16-47-09.jpg" alt="Ethan Moore">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">Teens BJJ &amp; Kids Coach</span>
+        <h3>Ethan Moore</h3>
+        <p class="disciplines">BJJ, Kids</p>
+        <p class="bio">Ethan started his BJJ journey right here at Training Grounds after being inspired by his dad training at the original TG. Now a key part of the Kids and Teens program, Ethan brings energy, relatability, and heart to every session. He loves seeing the kids improve week by week.</p>
+      </div>
+    </div>
+
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/38694978-8182-43f6-a39b-7a8fde643a3b/Screenshot+2025-06-19+at+9.25.52+am.png" alt="Sebastien Marr">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">TG Kids Assistant Coach</span>
+        <h3>Sebastien Marr</h3>
+        <p class="disciplines">Muay Thai, Boxing, Kids</p>
+        <p class="bio">Seb specialises in Muay Thai and Boxing, bringing passion, heart and experience beyond his years to every session. With a background in competitive kickboxing including WAKO Nationals and Junior Worlds, his coaching philosophy is grounded: give 100% of whatever you have that day.</p>
+      </div>
+    </div>
+
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/111ddd03-410d-45e0-b034-b3d4566951a4/Screenshot+2025-06-19+at+9.29.15+am.png" alt="Jed Haslam">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">TG Kids Assistant Coach</span>
+        <h3>Jed Haslam</h3>
+        <p class="disciplines">Muay Thai, BJJ, Kids</p>
+        <p class="bio">Jed started training Muay Thai at 14, driven by a childhood dream of becoming like Batman. Now training in both Muay Thai and BJJ, he brings a strong, grounded presence to the mats. As an assistant coach, Jed finds purpose in guiding the next generation with respect and resilience.</p>
+      </div>
+    </div>
+
+    <div class="coach-card fade-in">
+      <div class="coach-img">
+        <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/1e75b4fc-0f9e-41ce-bdd0-612042f0ab93/tempImage1YsxAR.jpg" alt="Seb Okhovat">
+      </div>
+      <div class="coach-info">
+        <span class="role-badge">TG Kids Assistant Coach</span>
+        <h3>Seb Okhovat</h3>
+        <p class="disciplines">Muay Thai, BJJ, Kids</p>
+        <p class="bio">Seb's journey began after discovering Muay Thai on social media, sparking a deep passion for martial arts. He's gone on to take first place in a Jiu Jitsu competition undefeated. His training philosophy is built on consistency, and he thrives on giving others the opportunity to learn new skills.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-content fade-in">
+    <h2>Come and See What We're All About</h2>
+    <p>Start with a one week free trial &mdash; no commitment, just come train and experience the community for yourself.</p>
+    <a href="join.html" class="btn-warm">Register for Your Free Trial</a>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/21c58c95-b43b-4220-b47d-d6563656cdb4/TrainingGrounds_MasterLogo.png" alt="Training Grounds">
+      <p>Where passion, creativity and community come together to create a martial arts experience like no other.</p>
+      <div class="social-links">
+        <a href="http://instagram.com/traininggrounds" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://www.facebook.com/tgcrowsnest" target="_blank" title="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.47h3.047v-2.642c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385c5.738-.9 10.126-5.864 10.126-11.854z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="coaches.html">Meet the Coaches</a></li>
+        <li><a href="kids.html">TG Kids Academy</a></li>
+        <li><a href="womens.html">Women's Self Defence</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get Started</h4>
+      <ul>
+        <li><a href="join.html">Membership Options</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="join.html">Free Trial</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Training Grounds Martial Arts. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
