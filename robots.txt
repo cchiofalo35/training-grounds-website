@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cchiofalo35.github.io/training-grounds-website/sitemap.xml
