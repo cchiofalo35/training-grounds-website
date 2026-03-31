@@ -206,6 +206,146 @@
     .page-header { padding: 140px 24px 60px; }
     .benefits-grid { grid-template-columns: repeat(2, 1fr); }
   }
+  /* ===== FIRST MOVE ===== */
+  .first-move {
+    background: var(--soft-white);
+  }
+
+  .first-move-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .first-move .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .first-move .intro-text {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .first-move p {
+    font-size: 0.95rem;
+    color: var(--text-body);
+    line-height: 1.85;
+    font-weight: 300;
+    margin-bottom: 18px;
+  }
+
+  .first-move h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-top: 36px;
+    margin-bottom: 16px;
+    letter-spacing: 0.03em;
+  }
+
+  .first-move ul {
+    list-style: none;
+    margin-bottom: 24px;
+    padding: 0;
+  }
+
+  .first-move ul li {
+    font-size: 0.95rem;
+    color: var(--text-body);
+    line-height: 1.85;
+    font-weight: 300;
+    margin-bottom: 6px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .first-move ul li::before {
+    content: '\2022';
+    color: var(--warm-accent);
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+  }
+
+  .first-move .tagline {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+  }
+
+  .first-move .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .first-move .pricing-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .first-move .pricing-item .price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+  }
+
+  .first-move .pricing-item .price-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-weight: 300;
+  }
+
+  .first-move .next-session {
+    background: var(--charcoal);
+    color: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .first-move .next-session .session-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--warm-accent);
+    margin-bottom: 6px;
+  }
+
+  .first-move .next-session .session-date {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .first-move .cta-area {
+    text-align: center;
+  }
+
+  .first-move .cta-area .cta-prompt {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .first-move .pricing-grid { grid-template-columns: 1fr; }
+  }
+
   .fade-in {
     opacity: 0; transform: translateY(20px);
     transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -314,7 +454,7 @@
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">
-      <a href="index.html"><img src="logo.svg" alt="Training Grounds"></a>
+      <a href="index.html"><img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/21c58c95-b43b-4220-b47d-d6563656cdb4/TrainingGrounds_MasterLogo.png" alt="Training Grounds"></a>
     </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -337,6 +477,62 @@
   <p>Build confidence, learn practical skills, join a supportive community of women martial artists</p>
 </div>
 
+<section class="first-move">
+  <div class="first-move-inner">
+    <div class="section-header fade-in">
+      <p class="section-label">Welcome to First Move</p>
+      <h2 class="section-title">Our Women's Personal Safety Program</h2>
+    </div>
+    <div class="fade-in">
+      <p class="intro-text">This isn't your typical self-defence class.</p>
+      <p>FIRST MOVE is built around real-life situations, helping you recognise what's happening early, make clear decisions, and move yourself to safety with confidence.</p>
+      <p>Using simple games and guided scenarios (think car parks, social settings, everyday moments), each session develops your instinct, awareness, and ability to respond, without pressure or overwhelm.</p>
+
+      <h3>What You'll Learn</h3>
+      <ul>
+        <li>Sharpen your awareness and learn to trust your instincts</li>
+        <li>Set clear boundaries and use your voice with confidence</li>
+        <li>Move with purpose and find safe exits</li>
+        <li>Use simple, practical skills to break contact and get away</li>
+        <li>Apply everything through fun, guided scenarios</li>
+      </ul>
+
+      <p class="tagline">No tricky techniques to memorise.</p>
+      <p class="tagline">No complicated choreography.</p>
+      <p class="tagline">Just real skills you can actually use.</p>
+
+      <h3>The Vibe</h3>
+      <p>Supportive, inclusive, and surprisingly fun.<br>Come as you are — no experience needed.</p>
+
+      <h3>Your Investment</h3>
+      <div class="pricing-grid">
+        <div class="pricing-item">
+          <div class="price">$40.00</div>
+          <div class="price-desc">Per session (once off)</div>
+        </div>
+        <div class="pricing-item">
+          <div class="price">$70.00</div>
+          <div class="price-desc">2 session pack</div>
+        </div>
+        <div class="pricing-item">
+          <div class="price">$90.00</div>
+          <div class="price-desc">3 session pack</div>
+        </div>
+      </div>
+
+      <div class="next-session">
+        <div class="session-label">Next Session</div>
+        <div class="session-date">Saturday 18th of April — 11:30am</div>
+      </div>
+
+      <div class="cta-area">
+        <p class="cta-prompt">Ready to make your first move? Come and experience it for yourself.</p>
+        <a href="https://traininggroundscrowsnest.clubworx.com/class-timetable" class="btn-warm" target="_blank">Book Your FIRST MOVE Session</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="hero-section">
   <div class="hero-inner">
     <div class="hero-text">
@@ -345,7 +541,7 @@
       <p>With experienced instructors who understand the unique needs of female students, you'll learn in a welcoming, judgment-free environment where you can grow at your own pace.</p>
     </div>
     <div class="hero-img">
-      <img src="womens-hero.jpg" alt="Women training in martial arts">
+      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/3f1fcf1b-c769-40f3-8f40-b71f7585bab8/IMG_3790.jpg" alt="Women training in martial arts">
     </div>
   </div>
 </section>
@@ -357,7 +553,7 @@
   </div>
   <div class="programs-grid">
     <div class="program-card fade-in">
-      <img src="womens-jj.jpg" alt="Women's Jiu-Jitsu" class="program-card-img">
+      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/472fc102-d6de-4805-935b-65adbbffba8f/4d16e5aa-1e46-4a6c-85a6-4750a048c7f9+2.jpg" alt="Women's Jiu-Jitsu" class="program-card-img">
       <div class="program-card-body">
         <h3>Women's Jiu-Jitsu</h3>
         <p>Master the art of leverage and technique in our women-focused jiu-jitsu classes. Build strength, flexibility, and problem-solving skills in a supportive environment.</p>
@@ -365,7 +561,7 @@
       </div>
     </div>
     <div class="program-card fade-in">
-      <img src="womens-sd.jpg" alt="Women's Self Defence" class="program-card-img">
+      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/3f1fcf1b-c769-40f3-8f40-b71f7585bab8/IMG_3790.jpg" alt="Women's Self Defence" class="program-card-img">
       <div class="program-card-body">
         <h3>Women's Self Defence</h3>
         <p>Practical, real-world self-defence techniques combined with awareness and confidence training. Learn to protect yourself with techniques that work.</p>
@@ -382,22 +578,22 @@
   </div>
   <div class="testimonials-grid">
     <div class="testimonial-card fade-in">
-      <div class="testimonial-stars">âââââ</div>
+      <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p>Fun class and learnt some useful skills. Really friendly instructors and good pace, would recommend!</p>
       <div class="testimonial-author">Helen Winks</div>
     </div>
     <div class="testimonial-card fade-in">
-      <div class="testimonial-stars">âââââ</div>
+      <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p>Good instruction and lots of opportunity to practice the skills being taught. Friendly, welcoming environment. Would definitely recommend.</p>
       <div class="testimonial-author">Deborah Cobb-Clark</div>
     </div>
     <div class="testimonial-card fade-in">
-      <div class="testimonial-stars">âââââ</div>
+      <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p>A fantastic class to attend! I took my 15 year old daughter with me and she feels more confident in defending herself now with some good techniques. I highly recommend this class to any younger or mature lady.</p>
       <div class="testimonial-author">Rachelle Borg</div>
     </div>
     <div class="testimonial-card fade-in">
-      <div class="testimonial-stars">âââââ</div>
+      <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p>Instructors were really great and friendly &mdash; made it entertaining. Learnt some really handy tips as well that I wouldn't have otherwise thought of.</p>
       <div class="testimonial-author">Shivani Patel</div>
     </div>
@@ -411,22 +607,22 @@
   </div>
   <div class="benefits-grid">
     <div class="benefit-item fade-in">
-      <div class="benefit-icon">ðª</div>
+      <div class="benefit-icon">&#9889;</div>
       <h4>Build Strength</h4>
       <p>Develop physical strength, endurance, and flexibility through structured training programs.</p>
     </div>
     <div class="benefit-item fade-in">
-      <div class="benefit-icon">ð¯</div>
+      <div class="benefit-icon">&#9733;</div>
       <h4>Gain Confidence</h4>
       <p>Learn practical skills and techniques that build genuine confidence in everyday situations.</p>
     </div>
     <div class="benefit-item fade-in">
-      <div class="benefit-icon">ð¯</div>
+      <div class="benefit-icon">&#9829;</div>
       <h4>Join Community</h4>
       <p>Connect with other women martial artists in a supportive, judgment-free environment.</p>
     </div>
     <div class="benefit-item fade-in">
-      <div class="benefit-icon">ð§ </div>
+      <div class="benefit-icon">&#9878;</div>
       <h4>Mental Resilience</h4>
       <p>Develop mental toughness, focus, and the ability to stay calm under pressure.</p>
     </div>
@@ -444,7 +640,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="logo.svg" alt="Training Grounds">
+      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/21c58c95-b43b-4220-b47d-d6563656cdb4/TrainingGrounds_MasterLogo.png" alt="Training Grounds">
       <p>Empowering martial artists in our community with world-class instruction and a supportive training environment.</p>
     </div>
     <div class="footer-col">

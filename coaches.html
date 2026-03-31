@@ -161,6 +161,107 @@
     box-shadow: 0 8px 30px rgba(201,168,124,0.3);
   }
 
+  /* ===== HOW WE COACH ===== */
+  .how-we-coach {
+    background: var(--soft-white);
+  }
+
+  .how-we-coach-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .how-we-coach .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .approach-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .approach-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 36px;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .approach-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+  }
+
+  .approach-card .approach-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm-accent);
+    margin-bottom: 16px;
+  }
+
+  .approach-card p {
+    font-size: 0.92rem;
+    color: var(--text-body);
+    line-height: 1.85;
+    font-weight: 300;
+  }
+
+  .member-benefits {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .member-benefits h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+    letter-spacing: 0.03em;
+  }
+
+  .member-benefits ul {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+
+  .member-benefits ul li {
+    font-size: 0.95rem;
+    color: var(--text-body);
+    line-height: 1.85;
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+
+  .member-benefits ul li::before {
+    content: '\2022';
+    color: var(--warm-accent);
+    font-weight: 700;
+    margin-right: 10px;
+  }
+
+  .member-benefits .cta-prompt {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 768px) {
+    .approach-grid { grid-template-columns: 1fr; }
+  }
+
   .cta-section {
     background: var(--charcoal); text-align: center;
     position: relative; overflow: hidden;
@@ -438,6 +539,37 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<section class="how-we-coach">
+  <div class="how-we-coach-inner">
+    <div class="section-header fade-in">
+      <p class="section-label">How We Coach</p>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-card fade-in">
+        <h3>Ecological Approach</h3>
+        <span class="approach-tag">Where Applied</span>
+        <p>Learning emerges through interaction between the individual, the task, and the environment — helping students read situations, make decisions, and adapt in real time.</p>
+      </div>
+      <div class="approach-card fade-in">
+        <h3>Constraint-Led Approach (CLA)</h3>
+        <span class="approach-tag">&nbsp;</span>
+        <p>We shape learning by adjusting variables such as space, rules, and goals — encouraging creativity, awareness, and performance under pressure.</p>
+      </div>
+    </div>
+    <div class="member-benefits fade-in">
+      <h3>What This Means for Our Members</h3>
+      <ul>
+        <li>Engaging, game-based sessions that keep learning enjoyable</li>
+        <li>Better decision-making and awareness</li>
+        <li>Skills that transfer to live training and real situations</li>
+        <li>Increased confidence, adaptability, and long-term progress</li>
+      </ul>
+      <p class="cta-prompt">Keen to experience it for yourself?</p>
+      <a href="join.html" class="btn-warm">Start Your Free Trial</a>
+    </div>
   </div>
 </section>
 

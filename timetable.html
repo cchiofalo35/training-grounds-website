@@ -199,25 +199,34 @@
     text-align: center; max-width: 700px; margin: 0 auto 48px;
     font-size: 0.95rem; color: var(--text-muted); font-weight: 300; line-height: 1.8;
   }
-  .timetable-grid {
-    display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px;
-    background: rgba(0,0,0,0.06); border-radius: 14px; overflow: hidden;
+  .timetable-days {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
   }
-  .tt-header {
-    background: var(--charcoal); color: #fff; padding: 16px 12px;
-    text-align: center; font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem; letter-spacing: 0.06em;
+  .tt-day {
+    background: #fff; border-radius: 12px; overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
   }
-  .tt-cell {
-    background: #fff; padding: 10px 8px; min-height: 90px;
-    display: flex; flex-direction: column; gap: 6px;
+  .tt-day-header {
+    background: var(--charcoal); color: #fff; padding: 14px 16px;
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.15rem;
+    letter-spacing: 0.06em; text-align: center;
   }
-  .tt-class {
-    padding: 8px 10px; border-radius: 6px; font-size: 0.72rem;
-    font-weight: 600; letter-spacing: 0.02em; line-height: 1.3;
+  .tt-day-list {
+    padding: 10px 12px; display: flex; flex-direction: column; gap: 6px;
   }
-  .tt-class .tt-time {
-    font-weight: 400; font-size: 0.68rem; opacity: 0.7; display: block; margin-top: 2px;
+  .tt-entry {
+    display: flex; align-items: baseline; gap: 10px;
+    padding: 7px 10px; border-radius: 6px; font-size: 0.78rem;
+    font-weight: 600; letter-spacing: 0.02em; line-height: 1.4;
+  }
+  .tt-entry .tt-time {
+    font-weight: 500; font-size: 0.72rem; opacity: 0.75;
+    white-space: nowrap; min-width: 58px; flex-shrink: 0;
+  }
+  .tt-placeholder {
+    padding: 24px 16px; text-align: center;
+    color: var(--text-muted); font-size: 0.88rem; font-weight: 400;
+    font-style: italic;
   }
   .tt-bjj { background: #E8F0E8; color: #2D5A2D; }
   .tt-mt { background: #FFF0E0; color: #8B5E2B; }
@@ -244,10 +253,7 @@
     .footer-inner { grid-template-columns: 1fr; gap: 32px; }
     .section-title { font-size: 2.4rem; }
     .cta-content h2 { font-size: 2.4rem; }
-    .timetable-grid { grid-template-columns: 1fr; }
-    .tt-header { display: none; }
-    .tt-day-label { display: block; font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.2rem; color: var(--charcoal); padding: 16px 12px 4px; }
+    .timetable-days { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 768px) {
     .nav-links { display: none; }
@@ -262,8 +268,8 @@
     section { padding: 72px 24px; }
     .nav-inner { padding: 14px 24px; }
     .page-header { padding: 140px 24px 60px; }
+    .timetable-days { grid-template-columns: 1fr; }
   }
-  @media (min-width: 961px) { .tt-day-label { display: none; } }
 
 </style>
 </head>
@@ -296,9 +302,113 @@
 <section>
   <div class="timetable-wrapper fade-in">
     <p class="timetable-note">All classes run at 460 Pacific Hwy, St Leonards 2065 (Street Level). Check in with your coach if you're attending for the first time &mdash; everyone's welcome.</p>
-    <div class="timetable-grid">
-      <div class="tt-header">Monday</div><div class="tt-header">Tuesday</div><div class="tt-header">Wednesday</div><div class="tt-header">Thursday</div><div class="tt-header">Friday</div><div class="tt-header">Saturday</div>
-      <div class="tt-cell"><div class="tt-day-label">Monday</div><div class="tt-class tt-bjj">BJJ Fundamentals<span class="tt-time">6:00am</span></div></div><div class="tt-cell"><div class="tt-day-label">Tuesday</div><div class="tt-class tt-mt">Muay Thai<span class="tt-time">6:00am</span></div></div><div class="tt-cell"><div class="tt-day-label">Wednesday</div><div class="tt-class tt-bjj">BJJ All Levels<span class="tt-time">6:00am</span></div></div><div class="tt-cell"><div class="tt-day-label">Thursday</div><div class="tt-class tt-box">Boxing<span class="tt-time">6:00am</span></div></div><div class="tt-cell"><div class="tt-day-label">Friday</div><div class="tt-class tt-mt">Muay Thai<span class="tt-time">6:00am</span></div></div><div class="tt-cell"><div class="tt-day-label">Saturday</div><div class="tt-class tt-bjj">BJJ All Levels<span class="tt-time">8:00am</span></div></div><div class="tt-cell"><div class="tt-day-label">Monday</div><div class="tt-class tt-mt">Muay Thai<span class="tt-time">9:30am</span></div></div><div class="tt-cell"><div class="tt-day-label">Tuesday</div><div class="tt-class tt-bjj">BJJ Fundamentals<span class="tt-time">9:30am</span></div></div><div class="tt-cell"><div class="tt-day-label">Wednesday</div><div class="tt-class tt-box">Boxing<span class="tt-time">9:30am</span></div></div><div class="tt-cell"><div class="tt-day-label">Thursday</div><div class="tt-class tt-mt">Muay Thai<span class="tt-time">9:30am</span></div></div><div class="tt-cell"><div class="tt-day-label">Friday</div><div class="tt-class tt-bjj">BJJ Fundamentals<span class="tt-time">9:30am</span></div></div><div class="tt-cell"><div class="tt-day-label">Saturday</div><div class="tt-class tt-mt">Muay Thai<span class="tt-time">9:30am</span></div></div><div class="tt-cell"><div class="tt-day-label">Monday</div><div class="tt-class tt-open">BJJ Open Mat<span class="tt-time">12:00pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Tuesday</div><div class="tt-class tt-open">Open Mat<span class="tt-time">12:00pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Wednesday</div><div class="tt-class tt-open">BJJ Open Mat<span class="tt-time">12:00pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Thursday</div><div class="tt-class tt-open">Open Mat<span class="tt-time">12:00pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Friday</div><div class="tt-class tt-open">Open Mat<span class="tt-time">12:00pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Saturday</div><div class="tt-class tt-kids">Kids BJJ (All Ages)<span class="tt-time">10:30am</span></div></div><div class="tt-cell"><div class="tt-day-label">Monday</div><div class="tt-class tt-kids">Kids BJJ (3-5yrs)<span class="tt-time">4:00pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Tuesday</div><div class="tt-class tt-kids">Kids Muay Thai<span class="tt-time">4:00pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Wednesday</div><div class="tt-class tt-kids">Kids BJJ (3-5yrs)<span class="tt-time">4:00pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Thursday</div><div class="tt-class tt-kids">Kids Muay Thai<span class="tt-time">4:00pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Friday</div><div class="tt-class tt-kids">Kids BJJ (6-12yrs)<span class="tt-time">4:00pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Saturday</div><div class="tt-class tt-box">Boxing<span class="tt-time">11:30am</span></div></div><div class="tt-cell"><div class="tt-day-label">Monday</div><div class="tt-class tt-kids">Kids BJJ (6-12yrs)<span class="tt-time">4:45pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Tuesday</div><div class="tt-class tt-womens">Women's BJJ<span class="tt-time">5:30pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Wednesday</div><div class="tt-class tt-kids">Kids BJJ (6-12yrs)<span class="tt-time">4:45pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Thursday</div><div class="tt-class tt-womens">Women's Self Defence<span class="tt-time">5:30pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Friday</div><div class="tt-class tt-mma">MMA<span class="tt-time">5:30pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Saturday</div><div class="tt-class tt-open">Open Mat<span class="tt-time">12:30pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Monday</div><div class="tt-class tt-box">Boxing<span class="tt-time">5:30pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Tuesday</div><div class="tt-class tt-wrest">Wrestling<span class="tt-time">6:30pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Wednesday</div><div class="tt-class tt-mt">Muay Thai<span class="tt-time">5:30pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Thursday</div><div class="tt-class tt-bjj">BJJ All Levels<span class="tt-time">6:30pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Friday</div><div class="tt-class tt-bjj">BJJ All Levels<span class="tt-time">6:30pm</span></div></div><div class="tt-cell"></div><div class="tt-cell"><div class="tt-day-label">Monday</div><div class="tt-class tt-bjj">BJJ All Levels<span class="tt-time">6:30pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Tuesday</div><div class="tt-class tt-mma">MMA<span class="tt-time">7:30pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Wednesday</div><div class="tt-class tt-bjj">BJJ Advanced<span class="tt-time">6:30pm</span></div></div><div class="tt-cell"><div class="tt-day-label">Thursday</div><div class="tt-class tt-wrest">Wrestling<span class="tt-time">7:30pm</span></div></div><div class="tt-cell"></div><div class="tt-cell"></div><div class="tt-cell"><div class="tt-day-label">Monday</div><div class="tt-class tt-mt">Muay Thai<span class="tt-time">7:30pm</span></div></div><div class="tt-cell"></div><div class="tt-cell"><div class="tt-day-label">Wednesday</div><div class="tt-class tt-box">Boxing<span class="tt-time">7:30pm</span></div></div><div class="tt-cell"></div><div class="tt-cell"></div><div class="tt-cell"></div>
+    <div class="timetable-days">
+
+      <!-- Monday -->
+      <div class="tt-day">
+        <div class="tt-day-header">Monday</div>
+        <div class="tt-day-list">
+          <div class="tt-entry tt-box"><span class="tt-time">6:00am</span> Boxing All Levels</div>
+          <div class="tt-entry tt-mt"><span class="tt-time">6:00am</span> Muay Thai Advanced</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">12:30pm</span> No GI BJJ</div>
+          <div class="tt-entry tt-box"><span class="tt-time">12:30pm</span> Boxing All Levels</div>
+          <div class="tt-entry tt-kids"><span class="tt-time">5:00pm</span> Muay Thai Kids</div>
+          <div class="tt-entry tt-mt"><span class="tt-time">5:50pm</span> Muay Thai Fundamentals</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">6:00pm</span> No GI BJJ Intermediate</div>
+          <div class="tt-entry tt-box"><span class="tt-time">6:00pm</span> Boxing Fundamentals</div>
+          <div class="tt-entry tt-box"><span class="tt-time">7:00pm</span> Boxing Intermediate</div>
+          <div class="tt-entry tt-mt"><span class="tt-time">7:00pm</span> Muay Thai Intermediate</div>
+          <div class="tt-entry tt-open"><span class="tt-time">7:00pm</span> No GI Open Mat</div>
+        </div>
+      </div>
+
+      <!-- Tuesday -->
+      <div class="tt-day">
+        <div class="tt-day-header">Tuesday</div>
+        <div class="tt-day-list">
+          <div class="tt-entry tt-mt"><span class="tt-time">6:00am</span> Muay Thai All Levels</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">6:30am</span> BJJ GI</div>
+          <div class="tt-entry tt-mt"><span class="tt-time">12:30pm</span> Muay Thai All Levels</div>
+          <div class="tt-entry tt-kids"><span class="tt-time">4:00pm</span> BJJ Kids 4-6.5 yrs</div>
+          <div class="tt-entry tt-kids"><span class="tt-time">5:00pm</span> BJJ Kids 6yrs+</div>
+          <div class="tt-entry tt-box"><span class="tt-time">5:50pm</span> Boxing Fundamentals</div>
+          <div class="tt-entry tt-mma"><span class="tt-time">6:00pm</span> MMA</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">6:00pm</span> BJJ GI</div>
+          <div class="tt-entry tt-mt"><span class="tt-time">7:00pm</span> Muay Thai Fundamentals</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">7:00pm</span> BJJ GI</div>
+          <div class="tt-entry tt-box"><span class="tt-time">7:00pm</span> Boxing Advanced</div>
+        </div>
+      </div>
+
+      <!-- Wednesday -->
+      <div class="tt-day">
+        <div class="tt-day-header">Wednesday</div>
+        <div class="tt-day-list">
+          <div class="tt-entry tt-box"><span class="tt-time">6:00am</span> Boxing All Levels</div>
+          <div class="tt-entry tt-womens"><span class="tt-time">6:30am</span> Womens BJJ</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">12:30pm</span> BJJ GI</div>
+          <div class="tt-entry tt-box"><span class="tt-time">12:30pm</span> Boxing All Levels</div>
+          <div class="tt-entry tt-kids"><span class="tt-time">5:00pm</span> Muay Thai Kids</div>
+          <div class="tt-entry tt-mt"><span class="tt-time">6:00pm</span> Muay Thai Fundamentals</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">6:00pm</span> No GI BJJ Intermediate</div>
+          <div class="tt-entry tt-box"><span class="tt-time">6:00pm</span> Boxing Intermediate</div>
+          <div class="tt-entry tt-mt"><span class="tt-time">7:00pm</span> Muay Thai Intermediate</div>
+          <div class="tt-entry tt-box"><span class="tt-time">7:00pm</span> Boxing Fundamentals</div>
+        </div>
+      </div>
+
+      <!-- Thursday -->
+      <div class="tt-day">
+        <div class="tt-day-header">Thursday</div>
+        <div class="tt-day-list">
+          <div class="tt-entry tt-box"><span class="tt-time">6:00am</span> Boxing All Levels</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">6:30am</span> BJJ GI</div>
+          <div class="tt-entry tt-mt"><span class="tt-time">12:30pm</span> Muay Thai All Levels</div>
+          <div class="tt-entry tt-kids"><span class="tt-time">4:00pm</span> BJJ Kids 4-6.5 yrs</div>
+          <div class="tt-entry tt-kids"><span class="tt-time">5:00pm</span> Teen No GI BJJ</div>
+          <div class="tt-entry tt-kids"><span class="tt-time">5:00pm</span> Muay Thai Kids</div>
+          <div class="tt-entry tt-kids"><span class="tt-time">5:00pm</span> Kids BJJ 6yrs+</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">5:30pm</span> BJJ GI Intro</div>
+          <div class="tt-entry tt-mt"><span class="tt-time">5:50pm</span> Muay Thai Advanced</div>
+          <div class="tt-entry tt-box"><span class="tt-time">6:00pm</span> Boxing Fundamentals</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">6:00pm</span> BJJ GI</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">7:00pm</span> BJJ GI</div>
+          <div class="tt-entry tt-box"><span class="tt-time">7:00pm</span> Boxing Advanced</div>
+        </div>
+      </div>
+
+      <!-- Friday -->
+      <div class="tt-day">
+        <div class="tt-day-header">Friday</div>
+        <div class="tt-day-list">
+          <div class="tt-entry tt-mt"><span class="tt-time">6:00am</span> Muay Thai All Levels</div>
+          <div class="tt-entry tt-open"><span class="tt-time">7:30am</span> No GI BJJ Open Mat</div>
+          <div class="tt-entry tt-box"><span class="tt-time">12:30pm</span> Boxing All Levels</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">12:30pm</span> No GI BJJ</div>
+          <div class="tt-entry tt-mt"><span class="tt-time">6:00pm</span> Muay Thai All Levels</div>
+          <div class="tt-entry tt-bjj"><span class="tt-time">6:00pm</span> BJJ GI</div>
+        </div>
+      </div>
+
+      <!-- Saturday -->
+      <div class="tt-day">
+        <div class="tt-day-header">Saturday</div>
+        <div class="tt-day-list">
+          <div class="tt-entry tt-box"><span class="tt-time">8:00am</span> Boxing Intermediate</div>
+          <div class="tt-entry tt-kids"><span class="tt-time">8:00am</span> BJJ Teen</div>
+          <div class="tt-entry tt-box"><span class="tt-time">8:30am</span> Boxing Fundamentals</div>
+          <div class="tt-entry tt-box"><span class="tt-time">9:00am</span> Boxing Sparring</div>
+          <div class="tt-entry tt-kids"><span class="tt-time">9:00am</span> Toddlers BJJ</div>
+          <div class="tt-entry tt-wrest"><span class="tt-time">9:30am</span> Wrestling</div>
+          <div class="tt-entry tt-kids"><span class="tt-time">9:30am</span> BJJ Kids 4-6.5 yrs</div>
+          <div class="tt-entry tt-mt"><span class="tt-time">9:30am</span> Muay Thai Fundamentals</div>
+          <div class="tt-entry tt-mt"><span class="tt-time">10:30am</span> Muay Thai Clinching</div>
+          <div class="tt-entry tt-open"><span class="tt-time">10:30am</span> BJJ GI &amp; No GI Open Mat</div>
+          <div class="tt-entry tt-kids"><span class="tt-time">10:30am</span> Kids BJJ 6yrs+</div>
+          <div class="tt-entry tt-womens"><span class="tt-time">11:30am</span> First Move &mdash; Women's Personal Safety</div>
+        </div>
+      </div>
+
     </div>
     <div class="legend">
       <div class="legend-item"><div class="legend-dot tt-bjj"></div>BJJ</div>
