@@ -2,7 +2,7 @@ name: Website Update from Training Grounds
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [labeled]
 
 jobs:
   update-website:
