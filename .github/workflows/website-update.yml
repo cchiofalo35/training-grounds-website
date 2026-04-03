@@ -1,0 +1,34 @@
+name: Website Update from Training Grounds
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  update-website:
+    if: contains(github.event.issue.labels.*.name, 'website-update')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          show_full_output: true
+          allowed_tools: "Bash,Edit,Read,Write,Glob,Grep"
+          prompt: |
+            A website update has been requested by the Training Grounds team. Here is their request:
+
+            Title: ${{ github.event.issue.title }}
+
+            Details: ${{ github.event.issue.body }}
+
+            Please make the requested changes to the website. Follow the guidelines in CLAUDE.md.
+            Only change what was specifically requested — do not modify anything else.
+            After making changes, commit them and create a pull request for review.
+            If the request is unclear, add a comment to this issue asking for clarification instead of guessing.
