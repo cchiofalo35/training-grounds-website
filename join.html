@@ -187,7 +187,7 @@
   .pricing-card {
     background: #fff; border-radius: 14px; padding: 36px 28px;
     text-align: center; border: 1px solid rgba(0,0,0,0.05);
-    transition: all 0.4s;
+    transition: all 0.4s; display: flex; flex-direction: column;
   }
   .pricing-card:hover {
     transform: translateY(-5px);
@@ -207,7 +207,7 @@
     font-weight: 300;
   }
   .pricing-card ul {
-    list-style: none; margin: 24px 0; text-align: left;
+    list-style: none; margin: 24px 0; text-align: center;
     font-size: 0.88rem; color: var(--text-body);
   }
   .pricing-card li {
@@ -218,7 +218,7 @@
     content: '\2022'; color: var(--warm-accent); font-weight: 700; margin-right: 10px;
   }
   .pricing-card li:last-child { border-bottom: none; }
-  .pricing-card .btn-primary { width: 100%; margin-top: 24px; }
+  .pricing-card .btn-primary { width: 100%; margin-top: auto; }
 
   /* ===== CLASS PACKS ===== */
   .class-packs { background: var(--soft-white); }
