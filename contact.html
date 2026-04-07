@@ -431,8 +431,12 @@
     </div>
     <div class="contact-form fade-in">
       <h3>Send Us a Message</h3>
-      <form action="https://formspree.io/leslie@traininggrounds.com.au" method="POST">
+      <div id="form-success" style="display:none; background:#e8f5e9; border:1px solid #a5d6a7; border-radius:8px; padding:16px; margin-bottom:20px; color:#2e7d32; font-size:0.9rem; font-weight:500;">
+        Thanks! Your message has been sent. We'll be in touch soon.
+      </div>
+      <form action="https://formsubmit.co/leslie@traininggrounds.com.au" method="POST">
         <input type="hidden" name="_subject" value="New enquiry from Training Grounds website">
+        <input type="hidden" name="_next" value="https://cchiofalo35.github.io/training-grounds-website/contact.html?sent=1">
         <div class="form-group">
           <label>Your Name</label>
           <input type="text" name="name" placeholder="Enter your name" required>
@@ -511,6 +515,9 @@
 document.querySelector('.contact-form form').addEventListener('submit', function() {
   document.getElementById('_replyto').value = this.querySelector('input[name="email"]').value;
 });
+if (window.location.search.includes('sent=1')) {
+  document.getElementById('form-success').style.display = 'block';
+}
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) { entry.target.classList.add('visible'); }
