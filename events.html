@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's On | Training Grounds Martial Arts &mdash; St Leonards Sydney</title>
+<meta name="description" content="Upcoming events and activities at Training Grounds Martial Arts in St Leonards, Sydney.">
+<meta name="author" content="Training Grounds Martial Arts">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://cchiofalo35.github.io/training-grounds-website/events.html">
+<!-- Open Graph -->
+<meta property="og:title" content="What's On | Training Grounds Martial Arts — St Leonards Sydney">
+<meta property="og:description" content="Upcoming events and activities at Training Grounds Martial Arts in St Leonards, Sydney.">
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/21c58c95-b43b-4220-b47d-d6563656cdb4/TrainingGrounds_MasterLogo.png">
+<meta property="og:url" content="https://cchiofalo35.github.io/training-grounds-website/events.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Training Grounds Martial Arts">
+<meta property="og:locale" content="en_AU">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --steel: #B0B5B8;
+    --charcoal: #1E1E1E;
+    --dark-grey: #2A2A2A;
+    --mid-grey: #3D3D3D;
+    --light-grey: #F2F2F0;
+    --off-white: #FAFAF8;
+    --warm-accent: #C9A87C;
+    --warm-accent-light: #E0CEAE;
+    --soft-white: #F7F5F2;
+    --text-dark: #1A1A1A;
+    --text-body: #4A4A4A;
+    --text-muted: #7A7A7A;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--off-white);
+    color: var(--text-body);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    background: rgba(30, 30, 30, 0.97);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav-inner {
+    max-width: 1240px; margin: 0 auto; padding: 14px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo img { height: 38px; opacity: 0.95; transition: opacity 0.3s; }
+  .nav-logo img:hover { opacity: 1; }
+  .nav-links {
+    display: flex; align-items: center; gap: 28px; list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none; color: var(--steel); font-size: 0.82rem;
+    font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: #fff; }
+  .nav-links a.active { color: var(--warm-accent); }
+  .nav-cta {
+    background: var(--warm-accent) !important; color: var(--charcoal) !important;
+    padding: 10px 26px !important; border-radius: 6px !important;
+    font-weight: 700 !important; transition: all 0.3s !important;
+  }
+  .nav-cta:hover { background: #fff !important; transform: translateY(-1px); }
+  .mobile-menu-btn {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 8px;
+  }
+  .mobile-menu-btn span {
+    width: 22px; height: 2px; background: var(--steel);
+    border-radius: 1px; transition: all 0.3s;
+  }
+
+  /* Page Header */
+  .page-header {
+    padding: 160px 40px 80px;
+    background: var(--charcoal);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: ''; position: absolute; top: -40%; right: -15%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(201,168,124,0.06) 0%, transparent 70%);
+  }
+  .page-header .section-label {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--warm-accent); margin-bottom: 14px;
+  }
+  .page-header h1 {
+    font-family: 'Bebas Neue', sans-serif; font-size: 4rem;
+    font-weight: 400; color: #fff; line-height: 1;
+    letter-spacing: 0.02em; position: relative; z-index: 1;
+  }
+  .page-header p {
+    font-size: 1.05rem; color: rgba(255,255,255,0.5);
+    max-width: 600px; margin: 20px auto 0; font-weight: 300; line-height: 1.8;
+    position: relative; z-index: 1;
+  }
+
+  /* Events section */
+  .events-section {
+    padding: 80px 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .events-image-link {
+    display: block;
+    text-decoration: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .events-image-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 60px rgba(0,0,0,0.18);
+  }
+  .events-image-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* CTA section */
+  .cta-section {
+    background: var(--charcoal); text-align: center; padding: 90px 40px;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: ''; position: absolute; top: -50%; right: -20%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,168,124,0.08) 0%, transparent 70%);
+  }
+  .cta-content {
+    position: relative; z-index: 1; max-width: 650px; margin: 0 auto;
+  }
+  .cta-content h2 {
+    font-family: 'Bebas Neue', sans-serif; font-size: 3.4rem;
+    font-weight: 400; color: #fff; margin-bottom: 16px;
+    line-height: 1; letter-spacing: 0.02em;
+  }
+  .cta-content p {
+    font-size: 1.05rem; color: rgba(255,255,255,0.5);
+    margin-bottom: 40px; font-weight: 300; line-height: 1.8;
+  }
+  .btn-warm {
+    display: inline-block; background: var(--warm-accent); color: var(--charcoal);
+    padding: 16px 44px; border-radius: 6px; text-decoration: none;
+    font-weight: 700; font-size: 0.85rem; letter-spacing: 0.06em;
+    text-transform: uppercase; transition: all 0.3s;
+  }
+  .btn-warm:hover {
+    background: #fff; transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(201,168,124,0.3);
+  }
+
+  /* Footer */
+  footer {
+    background: #151515; color: rgba(255,255,255,0.5);
+    padding: 64px 40px 28px;
+  }
+  .footer-inner {
+    max-width: 1240px; margin: 0 auto; display: grid;
+    grid-template-columns: 2fr 1fr 1fr; gap: 48px;
+  }
+  .footer-brand img { height: 44px; opacity: 0.85; margin-bottom: 18px; }
+  .footer-brand p { font-size: 0.88rem; line-height: 1.7; max-width: 340px; font-weight: 300; }
+  .footer-col h4 {
+    font-family: 'Bebas Neue', sans-serif; color: #fff;
+    font-size: 1.1rem; font-weight: 400; letter-spacing: 0.08em; margin-bottom: 20px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul a {
+    color: rgba(255,255,255,0.4); text-decoration: none;
+    font-size: 0.85rem; font-weight: 300; transition: color 0.3s;
+  }
+  .footer-col ul a:hover { color: var(--warm-accent); }
+  .social-links { display: flex; gap: 12px; margin-top: 24px; }
+  .social-links a {
+    width: 38px; height: 38px; border-radius: 8px;
+    background: rgba(255,255,255,0.06); display: flex;
+    align-items: center; justify-content: center;
+    text-decoration: none; transition: all 0.3s;
+  }
+  .social-links a svg {
+    width: 18px; height: 18px; fill: rgba(255,255,255,0.5);
+    transition: fill 0.3s;
+  }
+  .social-links a:hover { background: var(--warm-accent); }
+  .social-links a:hover svg { fill: var(--charcoal); }
+  .footer-bottom {
+    max-width: 1240px; margin: 44px auto 0; padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    text-align: center; font-size: 0.75rem;
+    color: rgba(255,255,255,0.25); letter-spacing: 0.03em;
+  }
+
+  /* Responsive */
+  @media (max-width: 960px) {
+    .page-header h1 { font-size: 3rem; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: flex; }
+    .nav-links.open {
+      display: flex; flex-direction: column; position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: rgba(30, 30, 30, 0.98);
+      backdrop-filter: blur(16px); padding: 24px 40px; gap: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner { padding: 14px 24px; }
+    .page-header { padding: 140px 24px 60px; }
+    .events-section { padding: 48px 16px; }
+    .cta-section { padding: 72px 24px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/21c58c95-b43b-4220-b47d-d6563656cdb4/TrainingGrounds_MasterLogo.png" alt="Training Grounds">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="timetable.html">Timetable</a></li>
+      <li><a href="coaches.html">Coaches</a></li>
+      <li><a href="kids.html">Kids Academy</a></li>
+      <li><a href="womens.html">Women's Self Defence</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="events.html" class="active">What's On</a></li>
+      <li><a href="join.html#signup" class="nav-cta">Start Free Trial</a></li>
+    </ul>
+    <button class="mobile-menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <p class="section-label">Training Grounds</p>
+  <h1>What's On</h1>
+  <p>Upcoming events, competitions and activities at Training Grounds.</p>
+</div>
+
+<section class="events-section">
+  <!-- EVENTS IMAGE: Replace the src below with the URL of the 2026 What's On image -->
+  <a href="https://www.traininggrounds.com.au/2026-whats-on" target="_blank" rel="noopener" class="events-image-link">
+    <img src="" alt="2026 What's On at Training Grounds Martial Arts">
+  </a>
+</section>
+
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Come and See What We're All About</h2>
+    <p>Start with a one week free trial &mdash; no commitment, just come train and experience the community for yourself.</p>
+    <a href="join.html#signup" class="btn-warm">Register for Your Free Trial</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://images.squarespace-cdn.com/content/v1/6822c001db7ee32d48700bc1/21c58c95-b43b-4220-b47d-d6563656cdb4/TrainingGrounds_MasterLogo.png" alt="Training Grounds">
+      <p>Where passion, creativity and community come together to create a martial arts experience like no other.</p>
+      <div class="social-links">
+        <a href="http://instagram.com/traininggrounds" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://www.facebook.com/tgcrowsnest" target="_blank" title="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.47h3.047v-2.642c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385c5.738-.9 10.126-5.864 10.126-11.854z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="coaches.html">Meet the Coaches</a></li>
+        <li><a href="kids.html">TG Kids Academy</a></li>
+        <li><a href="womens.html">Women's Self Defence</a></li>
+        <li><a href="events.html">What's On</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get Started</h4>
+      <ul>
+        <li><a href="join.html#signup">Membership Options</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="join.html#signup">Free Trial</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Training Grounds Martial Arts. All rights reserved.
+  </div>
+</footer>
+
+<script>
+document.getElementById('navLinks').addEventListener('click', function(e) {
+  if (e.target.tagName === 'A') this.classList.remove('open');
+});
+</script>
+</body>
+</html>
